@@ -25,9 +25,6 @@ const NewsPage = ({data}) => (
           </div>
         ))}
 
-        <p>AAAAAAAAAAAAAAAAAAAAAAAA</p>
-
-
     </Layout>
 )
     
