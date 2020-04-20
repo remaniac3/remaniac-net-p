@@ -1,0 +1,6 @@
+---
+title: "Hot and Spicy"
+date: "2020-04-14"
+---
+
+Justin Randall Timberlake was born on January 31, 1981 in Memphis, Tennessee to Lynn (Bomar) Harless and Charles Randall Timberlake, a Baptist church choir director. Timberlake grew up in Shelby Forest, a small community between Memphis and Millington. He has two half-brothers, Jonathan (born September 12, 1993) and Stephen (born August 14, 1998), from Charles' second marriage to Lisa Perry. His half-sister Laura Katherine died shortly after birth on May 12, 1997, and is mentioned in his acknowledgments in the album NSYNC as "My Angel in Heaven". His family circle includes a number of musicians; his grandfather introduced him to music from country artists like Johnny Cash and Willie Nelson. Performing as a child, Timberlake sang country and gospel music: at the age of 11, he appeared on the television show Star Search, performing country songs as "Justin Randall". By that time, he began listening to rhythm and blues musicians from the 1960s and 70s, such as Al Green, Stevie Wonder and Marvin Gaye, and he had listening sessions with his father of studio albums by the Eagles and Bob Seger.
