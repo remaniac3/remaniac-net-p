@@ -17,6 +17,11 @@ exports.onCreateNode = ({ node,getNode, actions }) => {
 
 exports.createPages = async ({ graphql, actions }) => {
     const { createPage } = actions
+
+    const templates = {
+        newsPlayground: path.resolve("src/pages/news-playground.js"),
+    }
+
     const result = await graphql(`
         query {
             allMarkdownRemark {
@@ -56,5 +61,25 @@ exports.createPages = async ({ graphql, actions }) => {
     //         },
     //     })
     // })
+
+    const postsPerPage = 4
+    const numberOfPages = Math.ceil(posts.length / postsPerPage)
+
+    Array.from({ length: numberOfPages }).forEach((_, i) => {
+        const isFirstPage = i === 0
+        const currentPage = i + 1
+
+        if(isFirstPage) return
+
+        createPage({
+            path: `/news/${currentPage}`,
+            component: templates.newsPlayground,
+            context: {
+                limit: postsPerPage,
+                skip: i * postsPerPage,
+                currentPage
+            }
+        })
+    })
 
 }
