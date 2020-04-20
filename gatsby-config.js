@@ -17,10 +17,6 @@ module.exports = {
         {
           name: `ABOUT`,
           link: `/about`
-        },
-        {
-          name: `PG`,
-          link: `/news-playground`
         }
       ],
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
