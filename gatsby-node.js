@@ -9,8 +9,6 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
         const [year] = new Date(node.frontmatter.date)
             .toLocaleDateString("en-GB", {
                 year: "numeric",
-                // month: "2-digit",
-                // day: "2-digit",
             })
             .split("/")
         const slug = value.replace("/blog/", "").replace(/\/$/, "")
