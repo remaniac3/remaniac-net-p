@@ -8,11 +8,10 @@ const NewsPage = () => (
     <Layout>
         <SEO title="News" />
         <h1>News</h1>
-
-
-
     </Layout>
 )
+
+export default NewsPage
     
 // export const query = graphql`
 //   query {
@@ -37,7 +36,7 @@ const NewsPage = () => (
 //   }
 // `
 
-export default NewsPage
+
 
 // {data.allMarkdownRemark.edges.map(({ node }) => (
 //   <div key={node.id}>
