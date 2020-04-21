@@ -23,8 +23,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `blog`,
         path: `${__dirname}/src/content/blog`,
+        name: `blog`,
       },
     },
 
@@ -34,7 +34,8 @@ module.exports = {
         plugins: [
           { resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 590,
+              maxWidth: 500,
+              maxHeight: 300,
             }
           }
         ],
