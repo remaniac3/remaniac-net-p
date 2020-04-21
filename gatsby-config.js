@@ -3,10 +3,6 @@ module.exports = {
     title: `R3MANIAC`,
       menuLinks:[
         {
-          name: `PAGE2`,
-          link: `/page-2`
-        },
-        {
           name: `WORKS`,
           link: `/works`
         },
@@ -23,13 +19,13 @@ module.exports = {
     author: `@remaniac3`,
   },
   plugins: [
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `markdown-pages`,
-        path: `${__dirname}/src/pages/news`,
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     name: `markdown-pages`,
+    //     path: `${__dirname}/src/pages/news`,
+    //   },
+    // },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
