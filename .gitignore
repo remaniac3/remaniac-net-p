@@ -71,3 +71,6 @@ yarn-error.log
 # gatsby default assets
 src/images/gatsby-astronaut.png
 src/images/gatsby-icon.png
+
+# temporary backups
+.raccoon

@@ -3,10 +3,6 @@ module.exports = {
     title: `R3MANIAC`,
       menuLinks:[
         {
-          name: `PAGE2`,
-          link: `/page-2`
-        },
-        {
           name: `WORKS`,
           link: `/works`
         },
@@ -22,14 +18,30 @@ module.exports = {
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@remaniac3`,
   },
+
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `markdown-pages`,
-        path: `${__dirname}/src/pages/news`,
+        path: `${__dirname}/content/blog`,
+        name: `blog`,
       },
     },
+
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          { resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 500,
+              maxHeight: 300,
+            }
+          }
+        ],
+      },
+    },
+
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -38,8 +50,11 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
+
     `gatsby-transformer-sharp`,
+
     `gatsby-transformer-remark`,
+
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
@@ -51,6 +66,26 @@ module.exports = {
         icon: `src/images/favicon.png`, // This path is relative to the root of the site.
       },
     },
+
+    `gatsby-plugin-sharp`,
+    {
+    resolve: `gatsby-transformer-remark`,
+    options: {
+      plugins: [
+        {
+          resolve: `gatsby-remark-images`,
+          options: {
+            // It's important to specify the maxWidth (in pixels) of
+            // the content container as this plugin uses this as the
+            // base for generating different widths of each image.
+            maxWidth: 590,
+          },
+        },
+      ],
+    },
+  }
+
+    
 
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline

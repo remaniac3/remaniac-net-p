@@ -45,7 +45,6 @@
 
 .footer-socmed-li a, a:link, a:visited {
     text-decoration: none;
-    color: white;
 }
 
 @media (min-width: 48em) {
