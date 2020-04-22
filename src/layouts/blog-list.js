@@ -5,7 +5,7 @@ const BlogPostList = ({ data, pageContext }) => {
   const { allMarkdownRemark } = data
 
   return (
-    <>
+    <div>
       {allMarkdownRemark.edges.map(({ node }) => {
         const imageSource = node.frontmatter.image.childImageSharp.fluid.src
 
@@ -36,7 +36,7 @@ const BlogPostList = ({ data, pageContext }) => {
           )
         })}
       </ul>
-    </>
+    </div>
   )
 }
 

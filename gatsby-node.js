@@ -26,6 +26,31 @@ const path = require(`path`)
 
 // 1. This is called once the data layer is bootstrapped to let plugins create pages from data.
 exports.createPages = ({ graphql, actions }) => {
+
+  /* === PAGINAITON === */
+
+  const blogListLayout = path.resolve(`./src/layouts/blog-list.js`)
+  const postsPerPage = 9
+  const postsWithoutFeatured = posts.filter(({ node }) => {
+    return !node.frontmatter.featured
+  })
+  const numPages = Math.ceil(postsWithoutFeatured.length / postsPerPage)
+
+  Array.from({ length: numPages }).forEach((_, i) => {
+    createPage({
+      path: i === 0 ? `/blog` : `/blog/page/${i + 1}`,
+      component: blogListLayout,
+      context: {
+        limit: postsPerPage,
+        skip: i * postsPerPage,
+        currentPage: i + 1,
+        numPages,
+      },
+    })
+  })
+
+  /* === INDIVIDUAL === */
+
   // 1.1 Getting the method to create pages
   const { createPage } = actions
   // 1.2 Tell which layout Gatsby should use to thse pages
